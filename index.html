@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastern Spices | Precision Milled, Small-Batch Spices</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-color: #FDFBF7;
+            --text-main: #1A1A1A;
+            --text-light: #4A4A4A;
+            --accent-color: #A63C24; /* Deep Chili Red */
+            --accent-hover: #8B2E19;
+            --section-bg: #F4EFE6;
+            --border-color: #E2D9C8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        h1 { font-size: 3.5rem; letter-spacing: -1.5px; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+        p { margin-bottom: 1.5rem; color: var(--text-light); }
+
+        /* Layout & Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 10rem 20px;
+            background-color: var(--section-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
+            color: var(--text-main);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 14px 36px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Philosophy Grid */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 4rem;
+            text-align: center;
+        }
+
+        .philosophy-item h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        /* Products Section */
+        .products {
+            background-color: #fff;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .product-category-title {
+            margin-top: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            font-size: 1.8rem;
+            color: var(--text-main);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .product-card {
+            background-color: var(--bg-color);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            border-color: #D1C5B0;
+        }
+
+        .product-image-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: var(--section-bg);
+            margin-bottom: 2rem;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+            border: 1px dashed #CCC;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            background-color: var(--text-main);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 20px;
+        }
+
+        footer h2 {
+            color: #fff;
+        }
+
+        footer p {
+            color: #A0A0A0;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero { padding: 6rem 20px; }
+            section { padding: 4rem 0; }
+            .philosophy-grid { gap: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Eastern Spices</h1>
+            <p class="subtitle">Radically transparent, precision-milled flavor. Ground this week, shipped direct to your kitchen.</p>
+            <a href="#shop" class="btn">View Current Batch</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>Our Methodology</h2>
+        <div class="philosophy-grid">
+            <div class="philosophy-item">
+                <h3>Direct From The Dry Zone</h3>
+                <p>We source directly from local farmers in the Eastern Province. By eliminating the long commercial supply chain, we secure premium raw ingredients before they lose their potency.</p>
+            </div>
+            <div class="philosophy-item">
+                <h3>Systems-Engineered Milling</h3>
+                <p>Standard grinders burn spices. We apply strict hardware-level thermal controls and friction monitoring to our milling process, ensuring volatile oils and authentic flavor profiles are perfectly preserved.</p>
+            </div>
+            <div class="philosophy-item">
+                <h3>Built in Public</h3>
+                <p>Total transparency. Every high-barrier kraft pouch is stamped with its specific milling date and batch data. You track the freshness from our machines straight to your pantry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="products">
+        <div class="container">
+            <h2>The Portfolio</h2>
+            
+            <h3 class="product-category-title">The Raw Staples</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-placeholder">[Kraft Pouch Image]</div>
+                    <span class="tag">Single Origin</span>
+                    <h3>Eastern Dry Chili</h3>
+                    <p>Vibrant, heat-packed, and ground in highly controlled batches to ensure maximum color and pungency.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-placeholder">[Kraft Pouch Image]</div>
+                    <span class="tag">Single Origin</span>
+                    <h3>Roasted Coriander</h3>
+                    <p>Earthy and deeply aromatic. We execute a precise light toast on the seeds prior to processing.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-placeholder">[Kraft Pouch Image]</div>
+                    <span class="tag">Single Origin</span>
+                    <h3>Smoky Paprika</h3>
+                    <p>Rich, sweet, and complex. Engineered to be the perfect finishing dust or marinade base.</p>
+                </div>
+            </div>
+
+            <h3 class="product-category-title">Signature Blends</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-placeholder">[Kraft Pouch Image]</div>
+                    <span class="tag">Craft Blend</span>
+                    <h3>Authentic Biryani Mix</h3>
+                    <p>A mathematically balanced ratio of whole and ground aromatics, designed to deliver rich, consistent layers of flavor.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-placeholder">[Kraft Pouch Image]</div>
+                    <span class="tag">Craft Blend</span>
+                    <h3>Shawarma Rub</h3>
+                    <p>Warm Middle Eastern aromatics, optimized for high-heat grilling and roasting.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-placeholder">[Kraft Pouch Image]</div>
+                    <span class="tag">Craft Blend</span>
+                    <h3>Jaffna Curry Powder</h3>
+                    <p>The authentic, robust, and fiery dark-roasted mix native to the northern and eastern coastlines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Follow The Process</h2>
+            <p>Join us as we engineer a better spice supply chain from the ground up.</p>
+            <p class="footer-links" style="margin-top: 1.5rem;">
+                <a href="#">Twitter (X)</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </p>
+            <p style="margin-top: 4rem; font-size: 0.85rem; opacity: 0.7;">&copy; 2026 Eastern Spices. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
